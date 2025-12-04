@@ -57,7 +57,7 @@ body {
 }
 
 .branding img {
-  height: 84px;
+  height: 120px;
   width: auto;
   border-radius: 8px;
 }
@@ -65,13 +65,13 @@ body {
 .branding-text {
   font-weight: 700;
   letter-spacing: 0.05em;
-  font-size: 0.85rem;
+  font-size: 1.85rem;
   line-height: 1.1;
 }
 
 .branding-text small {
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 1.7rem;
 }
 
 /* NAVIGATION */
