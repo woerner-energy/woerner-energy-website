@@ -66,14 +66,16 @@ body {
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 3.15rem;
-  line-height: 1.1;
+  line-height: 1.0;  /* WICHTIG: reduziert Grundabstand */
+  display: flex;
+  flex-direction: column; 
 }
 
 .branding-text small {
   font-weight: 500;
   font-size: 1.4rem;
+  margin-top: -6px;  /* SUPER-WIRKSAM: reduziert Abstand feinsteuerbar */
 }
-
 /* NAVIGATION */
 .nav {
   display: flex;
