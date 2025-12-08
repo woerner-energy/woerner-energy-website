@@ -1,4 +1,3 @@
-
 :root {
   --color-bg: #f6f7fb;
   --color-bg-alt: #ffffff;
@@ -66,17 +65,18 @@ body {
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 3.15rem;
-  line-height: 1.2;  /* WICHTIG: reduziert Grundabstand */
+  line-height: 1.2;  /* reduziert Grundabstand */
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .branding-text small {
   font-weight: 500;
   font-size: 1.4rem;
-  margin-top: -4px;  /* SUPER-WIRKSAM: reduziert Abstand feinsteuerbar */
+  margin-top: -4px;  /* feinsteuerbarer Abstand */
   margin-left: 0.3rem;
 }
+
 /* NAVIGATION */
 .nav {
   display: flex;
@@ -245,9 +245,7 @@ body {
   color: var(--color-muted);
 }
 
-/* CARDS */
-/* CARDS – horizontal scrollen auf allen Geräten */
-/* CARDS – horizontal scrollen, am Desktop 4 Karten sichtbar */
+/* CARDS – horizontal, mobil; ab Desktop Grid */
 .cards-grid {
   display: flex;
   gap: 1rem;
@@ -272,17 +270,9 @@ body {
   padding: 1.2rem;
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(0,0,0,0.02);
-  flex: 0 0 80%;               /* Standard: mobil = fast volle Breite */
+  flex: 0 0 80%;               /* mobil = fast volle Breite */
   scroll-snap-align: start;
 }
-
-/* Ab Desktop: 4 Karten pro Breite, 5. per Scroll erreichbar */
-@media (min-width: 900px) {
-  .card {
-    flex: 0 0 calc(25% - 0.75rem);  /* 4 Karten nebeneinander */
-  }
-}
-
 
 /* ÜBER UNS */
 .section-content {
@@ -322,7 +312,7 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-/* GALLERY */
+/* GALLERY – Standard */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -349,18 +339,27 @@ body {
   font-size: 0.85rem;
 }
 
+/* GALLERY – Speziallayout für Abschnitt „Gewerbespeicher“ */
+#gewerbespeicher .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Spalten auf Desktop */
+  gap: 2rem;
+  align-items: start;
+}
+
+#gewerbespeicher .gallery-item {
+  padding: 1.5rem; /* etwas größer wirken lassen */
+}
 
 /* Bildgröße im Abschnitt „Gewerbespeicher“ begrenzen */
 #gewerbespeicher .gallery-item img {
-  max-width: 360px;      /* maximale Breite → nach Wunsch anpassen */
-  max-height: 260px;     /* maximale Höhe → optional */
+  max-width: 500px;      /* maximale Breite → nach Wunsch anpassen */
   width: 100%;           /* skaliert innerhalb des Rahmens */
   height: auto;          /* hält das Seitenverhältnis */
   object-fit: contain;   /* nichts wird abgeschnitten */
   display: block;
-  margin: 0 auto;        /* zentriert das Bild */
+  margin: 0 auto 1rem;   /* zentriert das Bild + Abstand nach unten */
 }
-
 
 /* KONTAKT */
 .contact-layout {
@@ -471,7 +470,6 @@ body {
   transition: opacity 1s ease;
 }
 
-
 .slider img.active {
   opacity: 1;
 }
@@ -479,9 +477,9 @@ body {
 /* Buttons */
 .slider-controls {
   position: absolute;
-  bottom: 15px;            /* Abstand vom Bild unten */
-  left: 50%;               /* horizontale Mitte */
-  transform: translateX(-50%); /* exakt zentrieren */
+  bottom: 15px;          /* Abstand vom Bild unten */
+  left: 50%;             /* horizontale Mitte */
+  transform: translateX(-50%);
   display: flex;
   gap: 0.8rem;
 }
@@ -510,6 +508,10 @@ body {
   .contact-layout {
     grid-template-columns: minmax(0, 1fr);
   }
+  /* Gewerbespeicher-Gallery mobil einspaltig */
+  #gewerbespeicher .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
@@ -536,6 +538,7 @@ body {
   }
 }
 
+/* Desktop: Karten als klassisches Grid statt horizontalem Scrollen */
 @media (min-width: 900px) {
   .cards-grid {
     display: grid;
@@ -549,4 +552,3 @@ body {
     scroll-snap-align: unset;
   }
 }
-
