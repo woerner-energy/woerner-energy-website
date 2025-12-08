@@ -75,7 +75,7 @@ body {
   font-weight: 500;
   font-size: 1.4rem;
   margin-top: -4px;  /* SUPER-WIRKSAM: reduziert Abstand feinsteuerbar */
-  margin-left: 0.7rem;
+  margin-left: 0.5rem;
 }
 /* NAVIGATION */
 .nav {
