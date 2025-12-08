@@ -349,15 +349,16 @@ body {
   font-size: 0.85rem;
 }
 
-/* Bilder nur im Abschnitt "Gewerbespeicher" begrenzen */
+
+/* Bildgröße im Abschnitt „Gewerbespeicher“ begrenzen */
 #gewerbespeicher .gallery-item img {
-  max-width: 260px;   /* oder z.B. 300px */
-  max-height: 160px;  /* optional */
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Bild nicht beschneiden, nur skalieren */
+  max-width: 260px;      /* maximale Breite → nach Wunsch anpassen */
+  max-height: 160px;     /* maximale Höhe → optional */
+  width: 100%;           /* skaliert innerhalb des Rahmens */
+  height: auto;          /* hält das Seitenverhältnis */
+  object-fit: contain;   /* nichts wird abgeschnitten */
   display: block;
-  margin: 0 auto;      /* zentriert das Bild im Kasten */
+  margin: 0 auto;        /* zentriert das Bild */
 }
 
 
