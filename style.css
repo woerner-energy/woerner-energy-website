@@ -352,8 +352,8 @@ body {
 
 /* Bildgröße im Abschnitt „Gewerbespeicher“ begrenzen */
 #gewerbespeicher .gallery-item img {
-  max-width: 260px;      /* maximale Breite → nach Wunsch anpassen */
-  max-height: 160px;     /* maximale Höhe → optional */
+  max-width: 360px;      /* maximale Breite → nach Wunsch anpassen */
+  max-height: 260px;     /* maximale Höhe → optional */
   width: 100%;           /* skaliert innerhalb des Rahmens */
   height: auto;          /* hält das Seitenverhältnis */
   object-fit: contain;   /* nichts wird abgeschnitten */
