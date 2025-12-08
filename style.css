@@ -74,7 +74,7 @@ body {
 .branding-text small {
   font-weight: 500;
   font-size: 1.4rem;
-  margin-top: -6px;  /* SUPER-WIRKSAM: reduziert Abstand feinsteuerbar */
+  margin-top: -4px;  /* SUPER-WIRKSAM: reduziert Abstand feinsteuerbar */
 }
 /* NAVIGATION */
 .nav {
