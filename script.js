@@ -73,33 +73,5 @@ document.querySelector(".prev")?.addEventListener("click", () => {
 // Horizontal scrollen per Mausrad für die Leistungs-Karten
 const cardsGrid = document.querySelector('.cards-grid');
 
-if (cardsGrid) {
-  cardsGrid.addEventListener(
-    "wheel",
-    (event) => {
-      // nur eingreifen, wenn vertikal gescrollt wird
-      if (event.deltaY === 0) return;
 
-      const atStart = cardsGrid.scrollLeft === 0;
-      const atEnd =
-        Math.ceil(cardsGrid.scrollLeft + cardsGrid.clientWidth) >=
-        cardsGrid.scrollWidth;
-
-      // Wenn wir am Anfang sind und nach oben scrollen → Seite normal scrollen
-      if (event.deltaY < 0 && atStart) {
-        return; // kein preventDefault -> normales Scrollen
-      }
-
-      // Wenn wir am Ende sind und nach unten scrollen → Seite normal scrollen
-      if (event.deltaY > 0 && atEnd) {
-        return; // kein preventDefault -> normales Scrollen
-      }
-
-      // Sonst horizontales Scrollen innerhalb der Karten
-      event.preventDefault();
-      cardsGrid.scrollLeft += event.deltaY;
-    },
-    { passive: false }
-  );
-}
 

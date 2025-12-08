@@ -247,13 +247,14 @@ body {
 
 /* CARDS */
 /* CARDS – horizontal scrollen auf allen Geräten */
+/* CARDS – horizontal scrollen, am Desktop 4 Karten sichtbar */
 .cards-grid {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
+  overflow-x: auto;                 /* horizontaler Scrollbalken bei Bedarf */
   scroll-snap-type: x mandatory;
   padding-bottom: 0.5rem;
-  -webkit-overflow-scrolling: touch; /* Sanftes Scrollen auf iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-grid::-webkit-scrollbar {
@@ -271,10 +272,16 @@ body {
   padding: 1.2rem;
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(0,0,0,0.02);
-  flex: 0 0 260px;          /* Breite jeder Karte */
-  scroll-snap-align: start; /* Einrasten beim Scrollen */
+  flex: 0 0 80%;               /* Standard: mobil = fast volle Breite */
+  scroll-snap-align: start;
 }
 
+/* Ab Desktop: 4 Karten pro Breite, 5. per Scroll erreichbar */
+@media (min-width: 900px) {
+  .card {
+    flex: 0 0 calc(25% - 0.75rem);  /* 4 Karten nebeneinander */
+  }
+}
 
 
 /* ÜBER UNS */
