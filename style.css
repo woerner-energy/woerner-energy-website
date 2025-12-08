@@ -127,7 +127,7 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
   gap: 2rem;
-  align-items: end;
+  align-items: center;
   box-shadow: var(--shadow-soft);
   opacity: 0;
   transform: translateY(24px);
@@ -159,6 +159,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  height: 100%;
 }
 
 .hero-placeholder {
