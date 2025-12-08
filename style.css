@@ -542,3 +542,9 @@ body {
     display: block;
   }
 }
+
+@media (min-width: 900px) {
+  .card {
+    flex: 0 0 calc(33.333% - 1rem); 
+  }
+}
