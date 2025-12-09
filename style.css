@@ -169,7 +169,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  max-height: 360px; /* oder jede gewünschte Höhe */
+ 
   height: 100%;
+  object-fit: contain;
+
 }
 
 .hero-placeholder {
