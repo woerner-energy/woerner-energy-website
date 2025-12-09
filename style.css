@@ -513,7 +513,7 @@ body {
 }
 
 .team-member img {
-  max-width: 200px;   /* oder jede gewünschte Größe */
+  max-width: 450px;   /* oder jede gewünschte Größe */
   height: auto;
   border-radius: 8px; /* optional */
 }
