@@ -80,7 +80,7 @@ body {
 .branding-sub {
   font-size: 0.75rem;      /* sehr klein */
   color: var(--color-muted);
-  margin-top: -2px;        /* enger an die Zeile darüber */
+  margin-top: -1px;        /* enger an die Zeile darüber */
   margin-left: 0.3rem;     /* leicht eingerückt wie “Energiesysteme” */
   letter-spacing: 0.03em;  /* etwas feiner */
   opacity: 0.8;
