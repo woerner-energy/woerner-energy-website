@@ -77,6 +77,16 @@ body {
   margin-left: 0.3rem;
 }
 
+.branding-sub {
+  font-size: 0.75rem;      /* sehr klein */
+  color: var(--color-muted);
+  margin-top: -4px;        /* enger an die Zeile darüber */
+  margin-left: 0.3rem;     /* leicht eingerückt wie “Energiesysteme” */
+  letter-spacing: 0.03em;  /* etwas feiner */
+  opacity: 0.8;
+}
+
+
 /* NAVIGATION */
 .nav {
   display: flex;
