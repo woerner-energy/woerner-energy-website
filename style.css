@@ -546,6 +546,10 @@ body {
   background: rgba(255,255,255,0.9);
 }
 
+.team {
+  grid-column: 1 / -1 !important;   /* macht die ganze Breite frei */
+  width: 100%;
+}
 
 .team-grid {
   display: grid;
