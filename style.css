@@ -170,7 +170,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   max-height: 360px; /* oder jede gewünschte Höhe */
- 
+  margin-bottom: 40px;
   height: 100%;
   object-fit: contain;
 
@@ -544,17 +544,33 @@ body {
   .hero {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .section-alt {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .contact-layout {
     grid-template-columns: minmax(0, 1fr);
   }
-  /* Gewerbespeicher-Gallery mobil einspaltig */
+
+  /* Gewerbespeicher: auf Mobil komplett einspaltig, Bilder unter dem Text */
+  #gewerbespeicher.section-alt {
+    display: block; /* Grid aus */
+  }
+
+  #gewerbespeicher .section-content,
   #gewerbespeicher .gallery {
-    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  #gewerbespeicher .gallery {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Bilder schön untereinander */
+    gap: 1rem;
   }
 }
+
 
 @media (max-width: 700px) {
   .nav {
