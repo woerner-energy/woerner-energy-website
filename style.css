@@ -149,10 +149,22 @@ body {
   transform: translateY(0);
 }
 
+/* H1 über die ganze Breite */
+.hero-title {
+  grid-column: 1 / -1;
+  font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
+  margin: 0 0 1rem;
+}
+
 .hero h1 {
   font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
   margin: 0 0 1rem;
   grid-column: 1 / -1;
+}
+
+/* Text nur in der linken Spalte */
+.hero-content {
+  grid-column: 1 / 2;
 }
 
 .hero p {
@@ -160,11 +172,6 @@ body {
   color: var(--color-muted);
   grid-column: 1 / -1;
 }
-
-.hero-content {
-  grid-column: 1 / -1;  /* Textteil über gesamte Breite */
-}
-
 
 .hero-actions {
   display: flex;
