@@ -739,17 +739,25 @@ body {
 /* RESPONSIVE */
 @media (max-width: 800px) {
   .hero {
-    display: block;         /* statt Grid → normale Dokument-Reihenfolge */
+    display: flex;              /* statt grid/block */
+    flex-direction: column;     /* alles untereinander */
     padding: 2rem 1.2rem;
   }
-  .hero-content {
-    margin-bottom: 1.5rem;  /* Abstand zu den Buttons/Slider */
-  }
-  .hero-image {
-    margin-top: 1.5rem;     /* Slider schön unter Text & Buttons */
-    max-height: 320px;  
+
+  .hero h1 {
+    order: 0;                   /* Überschrift zuerst */
   }
 
+  .hero-content {
+    order: 1;                   /* Text + Buttons */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image {
+    order: 2;                   /* Slider immer darunter */
+    margin-top: 1.5rem;
+    max-height: 320px;
+  }
   .section-alt {
     grid-template-columns: minmax(0, 1fr);
   }
