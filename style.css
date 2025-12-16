@@ -635,12 +635,18 @@ body {
   background: rgba(255,255,255,0.9);
 }
 
-/* TEAM Bild */
+/* TEAM Bild – einheitliche Größe */
 .team-member img {
-  max-width: 450px;
-  height: auto;
+  width: 100%;
+  max-width: 450px;   /* kann so bleiben wie bei dir */
+  height: 520px;      /* feste Höhe -> macht beide gleich groß */
+  object-fit: cover;  /* füllt den Rahmen, ggf. Beschnitt */
+  object-position: center;
   border-radius: 8px;
+  display: block;
+  margin: 0 auto 0.75rem; /* zentrieren + etwas Abstand nach unten */
 }
+
 
 /* mobil: übereinander statt nebeneinander – nur fürs Team */
 @media (max-width: 800px) {
@@ -696,6 +702,12 @@ body {
   .slider img.active {
     display: block;       /* nur aktives Bild zeigen */
   }
+
+  .team-member img {
+  max-width: 100%;
+  height: 360px;
+  } 
+
 
   /* Über uns / Gewerbespeicher / Kontakt einspaltig */
   #ueber-uns .section-main {
